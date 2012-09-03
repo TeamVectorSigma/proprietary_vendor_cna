@@ -1,3 +1,4 @@
+add_lunch_combo cna_d710-userdebug
 add_lunch_combo cna_crespo-userdebug
 add_lunch_combo cna_crespo4g-userdebug
 add_lunch_combo cna_grouper-userdebug
