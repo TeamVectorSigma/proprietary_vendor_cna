@@ -1,5 +1,6 @@
 
 PRODUCT_MAKEFILES := \
+    $(LOCAL_DIR)/cna_d710.mk \
     $(LOCAL_DIR)/cna_crespo.mk \
     $(LOCAL_DIR)/cna_crespo4g.mk \
     $(LOCAL_DIR)/cna_grouper.mk \
