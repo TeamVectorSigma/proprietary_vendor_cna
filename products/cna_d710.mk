@@ -7,7 +7,7 @@ PRODUCT_COPY_FILES +=  \
     vendor/cna/prebuilt/hdpi/bootanimation.zip:system/media/bootanimation.zip
 
 # Release name
-PRODUCT_RELEASE_NAME := d710
+PRODUCT_RELEASE_NAME := D710
 
 PRODUCT_BUILD_PROP_OVERRIDES += PRODUCT_NAME=SPH-D710 TARGET_DEVICE=SPH-D710 BUILD_FINGERPRINT=samsung/SPH-D710/SPH-D710:4.0.4/IMM76I/FF18:user/release-keys  PRIVATE_BUILD_DESC="SPH-D710-user 4.0.4 IMM76I FF18 release-keys"
 
