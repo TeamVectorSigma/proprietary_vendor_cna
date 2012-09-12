@@ -3,9 +3,6 @@ $(call inherit-product, device/samsung/toroplus/full_toroplus.mk)
 # Inherit some common stuff.
 $(call inherit-product, vendor/cna/config/common_full_phone.mk)
 
-PRODUCT_PACKAGES += \
-    GNexusParts
-
 PRODUCT_COPY_FILES +=  \
     vendor/cna/prebuilt/xhdpi/bootanimation.zip:system/media/bootanimation.zip
 

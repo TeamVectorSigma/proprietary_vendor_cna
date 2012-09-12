@@ -132,7 +132,7 @@ else
             ro.cnaversion=CNA-JELLY$(BRANCH))-$(PRODUCT_VERSION_MAJOR).$(PRODUCT_VERSION_MINOR).$(shell date +%m%d%Y)-$(PRODUCT_RELEASE_NAME)
     else
         PRODUCT_PROPERTY_OVERRIDES += \
-            ro.modversion=CNA-JELLY$(BRANCH))-$(PRODUCT_VERSION_MAJOR).$(PRODUCT_VERSION_MINOR).$(shell date +%m%d%Y).$(PRODUCT_VERSION_DEVICE_SPECIFIC)
+            ro.cnaversion=CNA-JELLY$(BRANCH))-$(PRODUCT_VERSION_MAJOR).$(PRODUCT_VERSION_MINOR).$(shell date +%m%d%Y).$(PRODUCT_VERSION_DEVICE_SPECIFIC)
     endif
 endif
 
