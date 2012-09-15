@@ -93,7 +93,8 @@ PRODUCT_PACKAGES += \
     LiveWallpapers \
     LiveWallpapersPicker \
     VisualizationWallpapers \
-    PhaseBeam
+    PhaseBeam\
+	Apollo
 
 # Extra Optional packages
 PRODUCT_PACKAGES += \
@@ -125,22 +126,22 @@ ifdef CNA_NIGHTLY
 else
     ifdef CNA_RELEASE
         PRODUCT_PROPERTY_OVERRIDES += \
-            ro.cnaversion=CNA-JELLY$(BRANCH))-$(PRODUCT_VERSION_MAJOR).$(PRODUCT_VERSION_MINOR).$(shell date +%m%d%Y)-$(PRODUCT_RELEASE_NAME)
+            ro.cnaversion=CNA-JELLY-$(BRANCH))-$(PRODUCT_VERSION_MAJOR).$(PRODUCT_VERSION_MINOR).$(shell date +%m%d%Y)-$(PRODUCT_RELEASE_NAME)
     else
         PRODUCT_PROPERTY_OVERRIDES += \
-            ro.cnaversion=CNA-JELLY$(BRANCH))-$(PRODUCT_VERSION_MAJOR).$(PRODUCT_VERSION_MINOR).$(shell date +%m%d%Y).$(PRODUCT_VERSION_DEVICE_SPECIFIC)
+            ro.cnaversion=CNA-JELLY-$(BRANCH))-$(PRODUCT_VERSION_MAJOR).$(PRODUCT_VERSION_MINOR).$(shell date +%m%d%Y).$(PRODUCT_VERSION_DEVICE_SPECIFIC)
     endif
 endif
 
 ifdef CNA_NIGHTLY
     PRODUCT_PROPERTY_OVERRIDES += \
-        ro.modversion=Codename-Android-$(PRODUCT_VERSION_MAJOR)-NIGHTLY-$(shell date +%m%d%Y)-$(PRODUCT_RELEASE_NAME)
+        ro.modversion=Codename-J-Android-$(PRODUCT_VERSION_MAJOR)-NIGHTLY-$(shell date +%m%d%Y)-$(PRODUCT_RELEASE_NAME)
 else
     ifdef CNA_RELEASE
         PRODUCT_PROPERTY_OVERRIDES += \
-            ro.modversion=CNA-JELLY$(BRANCH))-$(PRODUCT_VERSION_MAJOR).$(PRODUCT_VERSION_MINOR).$(shell date +%m%d%Y)-$(PRODUCT_RELEASE_NAME)
+            ro.modversion=CNA-JELLY-$(BRANCH))-$(PRODUCT_VERSION_MAJOR).$(PRODUCT_VERSION_MINOR).$(shell date +%m%d%Y)-$(PRODUCT_RELEASE_NAME)
     else
         PRODUCT_PROPERTY_OVERRIDES += \
-            ro.modversion=CNA-JELLY$(BRANCH))-$(PRODUCT_VERSION_MAJOR).$(PRODUCT_VERSION_MINOR).$(shell date +%m%d%Y).$(PRODUCT_VERSION_DEVICE_SPECIFIC)-Test
+            ro.modversion=CNA-JELLY-$(BRANCH))-$(PRODUCT_VERSION_MAJOR).$(PRODUCT_VERSION_MINOR).$(shell date +%m%d%Y).$(PRODUCT_VERSION_DEVICE_SPECIFIC)-Test
     endif
 endif
