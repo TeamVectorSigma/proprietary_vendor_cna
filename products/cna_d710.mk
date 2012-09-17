@@ -3,6 +3,9 @@ $(call inherit-product, device/samsung/d710/full_d710.mk)
 # Inherit some common stuff.
 $(call inherit-product, vendor/cna/config/common_full_phone.mk)
 
+# Inherit some common stuff.
+$(call inherit-product, vendor/cna/config/cdma.mk)
+
 PRODUCT_COPY_FILES +=  \
     vendor/cna/prebuilt/hdpi/bootanimation.zip:system/media/bootanimation.zip
 
