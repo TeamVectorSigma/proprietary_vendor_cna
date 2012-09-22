@@ -10,12 +10,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.com.android.dateformat=MM-dd-yyyy \
     ro.com.android.dataroaming=false
 
-# Backup Tool
-PRODUCT_COPY_FILES += \
-    vendor/cna/prebuilt/common/bin/backuptool.sh:system/bin/backuptool.sh \
-    vendor/cna/prebuilt/common/bin/backuptool.functions:system/bin/backuptool.functions \
-    vendor/cna/prebuilt/common/bin/50-cna.sh:system/addon.d/50-cna.sh
-
 # init.d support
 PRODUCT_COPY_FILES += \
     vendor/cna/prebuilt/common/etc/init.d/00banner:system/etc/init.d/00banner \
@@ -107,6 +101,20 @@ PRODUCT_PACKAGES += \
     mke2fs \
     tune2fs
 
+# Openssh
+PRODUCT_PACKAGES += \
+    scp \
+    sftp \
+    ssh \
+    sshd \
+    sshd_config \
+    ssh-keygen \
+    start-ss
+
+# rsync
+PRODUCT_PACKAGES += \
+    rsync
+
 PRODUCT_PACKAGE_OVERLAYS += vendor/cna/overlay/dictionaries
 PRODUCT_PACKAGE_OVERLAYS += vendor/cna/overlay/common
 
@@ -115,13 +123,15 @@ include vendor/cna/config/themes_common.mk
 
 BRANCH = JoyRide
 PRODUCT_VERSION_MAJOR = 3
-PRODUCT_VERSION_MINOR = 5
+PRODUCT_VERSION_MINOR = 6
 PRODUCT_VERSION_MAINTENANCE = 0
 
 PRODUCT_BUILD_PROP_OVERRIDES += BUILD_DISPLAY_ID=JRO03L
 
 PRODUCT_PROPERTY_OVERRIDES += \
-ro.cnaversion=Codename-Android-($(BRANCH))-$(PRODUCT_VERSION_MAJOR).$(PRODUCT_VERSION_MINOR).$(shell date +%m%d%Y)$(PRODUCT_VERSION_DEVICE_SPECIFIC)-TEST
+    ro.rommanager.developerid=grp \
+    ro.goo.developerid=justlovejoy \
+    ro.goo.board=$(TARGET_PRODUCT)
 
 ifdef CNA_NIGHTLY
     PRODUCT_PROPERTY_OVERRIDES += \
@@ -129,7 +139,10 @@ ifdef CNA_NIGHTLY
 else
     ifdef CNA_RELEASE
         PRODUCT_PROPERTY_OVERRIDES += \
-            ro.modversion=Codename-Android-($(BRANCH))-$(PRODUCT_VERSION_MAJOR).$(PRODUCT_VERSION_MINOR).$(shell date +%m%d%Y)-$(PRODUCT_RELEASE_NAME)
+            ro.goo.rom=CodenameAndroid \
+            ro.goo.version=$(PRODUCT_VERSION_MAJOR).$(PRODUCT_VERSION_MINOR).$(PRODUCT_VERSION_MAINTENANCE) \
+            ro.cnaversion=Codename-Android-$(PRODUCT_VERSION_MAJOR).$(PRODUCT_VERSION_MINOR).$(PRODUCT_VERSION_MAINTENANCE)$(PRODUCT_VERSION_DEVICE_SPECIFIC) \
+            ro.modversion=CNA-JELLY-($(BRANCH))-$(PRODUCT_VERSION_MAJOR).$(PRODUCT_VERSION_MINOR).$(shell date +%m%d%Y)-$(PRODUCT_RELEASE_NAME)
     else
         PRODUCT_PROPERTY_OVERRIDES += \
             ro.modversion=Codename-Android-($(BRANCH))-$(PRODUCT_VERSION_MAJOR).$(PRODUCT_VERSION_MINOR).$(PRODUCT_VERSION_MAINTENANCE)$(PRODUCT_VERSION_DEVICE_SPECIFIC)-RC-$(PRODUCT_RELEASE_NAME)-UNOFFICIAL
