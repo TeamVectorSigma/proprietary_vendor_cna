@@ -101,20 +101,6 @@ PRODUCT_PACKAGES += \
     mke2fs \
     tune2fs
 
-# Openssh
-PRODUCT_PACKAGES += \
-    scp \
-    sftp \
-    ssh \
-    sshd \
-    sshd_config \
-    ssh-keygen \
-    start-ss
-
-# rsync
-PRODUCT_PACKAGES += \
-    rsync
-
 PRODUCT_PACKAGE_OVERLAYS += vendor/cna/overlay/dictionaries
 PRODUCT_PACKAGE_OVERLAYS += vendor/cna/overlay/common
 
@@ -129,9 +115,7 @@ PRODUCT_VERSION_MAINTENANCE = 0
 PRODUCT_BUILD_PROP_OVERRIDES += BUILD_DISPLAY_ID=JRO03L
 
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.rommanager.developerid=grp \
-    ro.goo.developerid=justlovejoy \
-    ro.goo.board=$(TARGET_PRODUCT)
+ro.cnaversion=Codename-Android-($(BRANCH))-$(PRODUCT_VERSION_MAJOR).$(PRODUCT_VERSION_MINOR).-$(shell date +%m%d%Y)$(PRODUCT_VERSION_DEVICE_SPECIFIC)-TEST
 
 ifdef CNA_NIGHTLY
     PRODUCT_PROPERTY_OVERRIDES += \
@@ -139,10 +123,7 @@ ifdef CNA_NIGHTLY
 else
     ifdef CNA_RELEASE
         PRODUCT_PROPERTY_OVERRIDES += \
-            ro.goo.rom=CodenameAndroid \
-            ro.goo.version=$(PRODUCT_VERSION_MAJOR).$(PRODUCT_VERSION_MINOR).$(PRODUCT_VERSION_MAINTENANCE) \
-            ro.cnaversion=Codename-Android-$(PRODUCT_VERSION_MAJOR).$(PRODUCT_VERSION_MINOR).$(PRODUCT_VERSION_MAINTENANCE)$(PRODUCT_VERSION_DEVICE_SPECIFIC) \
-            ro.modversion=CNA-JELLY-($(BRANCH))-$(PRODUCT_VERSION_MAJOR).$(PRODUCT_VERSION_MINOR).$(shell date +%m%d%Y)-$(PRODUCT_RELEASE_NAME)
+            ro.modversion=Codename-Android-($(BRANCH))-$(PRODUCT_VERSION_MAJOR).$(PRODUCT_VERSION_MINOR).-$(shell date +%m%d%Y)-$(PRODUCT_RELEASE_NAME)
     else
         PRODUCT_PROPERTY_OVERRIDES += \
             ro.modversion=Codename-Android-($(BRANCH))-$(PRODUCT_VERSION_MAJOR).$(PRODUCT_VERSION_MINOR).$(PRODUCT_VERSION_MAINTENANCE)$(PRODUCT_VERSION_DEVICE_SPECIFIC)-RC-$(PRODUCT_RELEASE_NAME)-UNOFFICIAL
