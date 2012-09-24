@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (C) 2009 The Android Open Source Project
+ 
+ Licensed under the Apache License, Version 2.0 (the "License");
+ you may not use this file except in compliance with the License.
+ You may obtain a copy of the License at
+ 
+ http://www.apache.org/licenses/LICENSE-2.0
+ 
+ Unless required by applicable law or agreed to in writing, software
+ distributed under the License is distributed on an "AS IS" BASIS,
+ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ See the License for the specific language governing permissions and
+ limitations under the License.
+ -->
+
+<favorites xmlns:launcher="http://schemas.android.com/apk/res/com.cyanogenmod.trebuchet">
+    <!-- Far-left screen [0] -->
+    
+    <!-- Left screen [1] -->
+    <appwidget 
+        launcher:packageName="com.google.android.apps.ears"
+        launcher:className="com.google.android.apps.ears.widget.EarsMusicWidgetProvider"
+        launcher:screen="1"
+        launcher:spanY="1"
+        launcher:x="0"
+        launcher:y="2"
+        launcher:spanX="4" />
+
+    <appwidget
+        launcher:screen="1"
+        launcher:spanY="1"
+        launcher:x="0"
+        launcher:spanX="4"
+        launcher:packageName="com.android.settings"
+        launcher:className="com.android.settings.widget.SettingsAppWidgetProvider"
+        launcher:y="3" />
+
+    <!-- Middle screen [2] -->
+    <appwidget
+        launcher:x="1"
+        launcher:y="0"
+        launcher:screen="2"
+        launcher:spanX="2"
+        launcher:spanY="2"
+        launcher:packageName="com.google.android.deskclock"
+        launcher:className="com.android.alarmclock.AnalogAppWidgetProvider" />
+
+    <favorite 
+        launcher:x="0"
+        launcher:screen="2"
+        launcher:y="3"
+        launcher:packageName="com.android.gallery3d"
+        launcher:className="com.android.camera.Camera" />
+
+    <folder
+        launcher:screen="2"
+        launcher:x="3"
+        launcher:y="3"
+        launcher:title="@string/default_folder_name" >
+
+        <favorite
+            launcher:packageName="com.google.android.apps.maps"
+            launcher:className="com.google.android.maps.MapsActivity" />
+
+        <favorite
+            launcher:packageName="com.google.android.gm"
+            launcher:className="com.google.android.gm.GmailActivity" />
+
+        <favorite
+            launcher:packageName="com.google.android.apps.plus"
+            launcher:className="com.google.android.apps.plus.phone.HomeActivity" />
+
+        <favorite
+            launcher:packageName="com.android.vending"
+            launcher:className="com.android.vending.AssetBrowserActivity" />
+
+        <favorite
+            launcher:packageName="com.google.android.music" 
+            launcher:className="com.android.music.activitymanagement.TopLevelActivity" />
+
+        <favorite
+            launcher:packageName="com.google.android.apps.books"
+            launcher:className="com.google.android.apps.books.app.BooksActivity" />
+
+        <favorite 
+            launcher:packageName="com.google.android.youtube"
+            launcher:className="com.google.android.youtube.app.honeycomb.Shell$HomeActivity" />
+
+        <favorite
+            launcher:packageName="com.google.android.videos"
+            launcher:className="com.google.android.youtube.videos.EntryPoint" />
+
+        <favorite
+            launcher:packageName="com.google.android.talk"
+            launcher:className="com.google.android.talk.SigningInActivity" />
+
+        <favorite
+            launcher:packageName="com.google.android.calendar"
+            launcher:className="com.android.calendar.AllInOneActivity" />
+
+        <favorite
+            launcher:packageName="com.google.android.apps.plus"
+            launcher:className="com.google.android.apps.plus.phone.ConversationListActivity" />
+
+    </folder>
+
+    <!-- Right screen [3] -->
+    <appwidget
+        launcher:x="1"
+        launcher:y="1"
+        launcher:spanX="2"
+        launcher:spanY="2"
+        launcher:screen="3"
+        launcher:packageName="com.android.vending"
+        launcher:className="com.android.vending.MarketWidgetProvider" />
+
+    <favorite
+        launcher:x="1"
+        launcher:screen="3"
+        launcher:y="3"
+        launcher:packageName="com.android.gallery3d"
+        launcher:className="com.android.gallery3d.app.Gallery" />
+
+    <favorite
+        launcher:x="2"
+        launcher:packageName="com.android.settings"
+        launcher:screen="3"
+        launcher:y="3"
+        launcher:className="com.android.settings.Settings" />
+
+    <favorite
+        launcher:screen="0"
+        launcher:x="0"
+        launcher:y="0"
+        launcher:packageName="com.android.contacts"
+        launcher:className="com.android.contacts.activities.DialtactsActivity"
+        launcher:container="-101" />
+
+    <favorite
+        launcher:screen="1"
+        launcher:x="1"
+        launcher:y="0"
+        launcher:packageName="com.android.contacts"
+        launcher:container="-101"
+        launcher:className="com.android.contacts.activities.PeopleActivity" />
+
+    <favorite
+        launcher:y="0"
+        launcher:screen="3"
+        launcher:x="3"
+        launcher:container="-101"
+        launcher:packageName="com.android.mms"
+        launcher:className="com.android.mms.ui.ConversationList" />
+
+    <favorite 
+        launcher:y="0"
+        launcher:screen="4"
+        launcher:x="4"
+        launcher:container="-101"
+        launcher:packageName="com.google.android.browser"
+        launcher:className="com.android.browser.BrowserActivity" />
+
+</favorites>
