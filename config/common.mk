@@ -107,6 +107,13 @@ PRODUCT_PACKAGE_OVERLAYS += vendor/cna/overlay/common
 # T-Mobile theme engine
 include vendor/cna/config/themes_common.mk
 
+# GOO-Integration Tools
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.goo.developerid=justlovejoy \
+	ro.goo.board=$(TARGET_PRODUCT) \
+	ro.goo.rom=cna_$(TARGET_PRODUCT) \
+	ro.goo.version=1
+
 BRANCH = JoyRide
 PRODUCT_VERSION_MAJOR = 3
 PRODUCT_VERSION_MINOR = 6
@@ -115,7 +122,7 @@ PRODUCT_VERSION_MAINTENANCE = 0
 PRODUCT_BUILD_PROP_OVERRIDES += BUILD_DISPLAY_ID=JRO03L
 
 PRODUCT_PROPERTY_OVERRIDES += \
-ro.cnaversion=Codename-Android-($(BRANCH))-$(PRODUCT_VERSION_MAJOR).$(PRODUCT_VERSION_MINOR).-$(shell date +%m%d%Y)$(PRODUCT_VERSION_DEVICE_SPECIFIC)-TEST
+ro.cnaversion=Codename-Android-($(BRANCH))-$(PRODUCT_VERSION_MAJOR).$(PRODUCT_VERSION_MINOR).$(PRODUCT_VERSION_MAINTENANCE)-$(shell date +%m%d%Y)$(PRODUCT_VERSION_DEVICE_SPECIFIC)-ALPHA
 
 ifdef CNA_NIGHTLY
     PRODUCT_PROPERTY_OVERRIDES += \
