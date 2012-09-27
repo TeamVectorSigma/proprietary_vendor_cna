@@ -99,13 +99,42 @@ PRODUCT_PACKAGES += \
     openvpn \
     e2fsck \
     mke2fs \
-    tune2fs
+    tune2fs \
+    bash \
+    vim \
+    nano \
+    htop \
+    powertop \
+    lsof
+
+# Openssh
+PRODUCT_PACKAGES += \
+    scp \
+    sftp \
+    ssh \
+    sshd \
+    sshd_config \
+    ssh-keygen \
+    start-ss
+
+# rsync
+PRODUCT_PACKAGES += \
+    rsync
 
 PRODUCT_PACKAGE_OVERLAYS += vendor/cna/overlay/dictionaries
 PRODUCT_PACKAGE_OVERLAYS += vendor/cna/overlay/common
 
 # T-Mobile theme engine
 include vendor/cna/config/themes_common.mk
+
+
+
+BRANCH = JoyRide
+PRODUCT_VERSION_MAJOR = 3
+PRODUCT_VERSION_MINOR = 6
+PRODUCT_VERSION_MAINTENANCE = 1
+
+PRODUCT_BUILD_PROP_OVERRIDES += BUILD_DISPLAY_ID=JRO03R
 
 # GOO-Integration Tools
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -114,15 +143,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
 	ro.goo.rom=cna_$(TARGET_PRODUCT) \
 	ro.goo.version=1
 
-BRANCH = JoyRide
-PRODUCT_VERSION_MAJOR = 3
-PRODUCT_VERSION_MINOR = 6
-PRODUCT_VERSION_MAINTENANCE = 0
-
-PRODUCT_BUILD_PROP_OVERRIDES += BUILD_DISPLAY_ID=JRO03L
-
 PRODUCT_PROPERTY_OVERRIDES += \
-ro.cnaversion=Codename-Android-($(BRANCH))-$(PRODUCT_VERSION_MAJOR).$(PRODUCT_VERSION_MINOR).$(PRODUCT_VERSION_MAINTENANCE)-$(shell date +%m%d%Y)$(PRODUCT_VERSION_DEVICE_SPECIFIC)-ALPHA
+ro.cnaversion=Codename-Android-($(BRANCH))-$(PRODUCT_VERSION_MAJOR).$(PRODUCT_VERSION_MINOR).$(PRODUCT_VERSION_MAINTENANCE)-$(shell date +%m%d%Y)$(PRODUCT_VERSION_DEVICE_SPECIFIC)-ALPHA 2
 
 ifdef CNA_NIGHTLY
     PRODUCT_PROPERTY_OVERRIDES += \
