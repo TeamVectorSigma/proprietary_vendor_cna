@@ -1,17 +1,1 @@
 add_lunch_combo cna_d710-userdebug
-add_lunch_combo cna_crespo-userdebug
-add_lunch_combo cna_crespo4g-userdebug
-add_lunch_combo cna_grouper-userdebug
-add_lunch_combo cna_maguro-userdebug
-add_lunch_combo cna_stingray-userdebug
-add_lunch_combo cna_stingray_cdma-userdebug
-add_lunch_combo cna_toro-userdebug
-add_lunch_combo cna_toroplus-userdebug
-add_lunch_combo cna_umts_everest-userdebug
-add_lunch_combo cna_wingray-userdebug
-add_lunch_combo cna_d2att-userdebug
-add_lunch_combo cna_d2spr-userdebug
-add_lunch_combo cna_d2tmo-userdebug
-add_lunch_combo cna_d2usc-userdebug
-add_lunch_combo cna_d2vzw-userdebug
-add_lunch_combo cna_i9300-userdebug
