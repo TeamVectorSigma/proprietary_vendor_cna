@@ -92,6 +92,7 @@ PRODUCT_PACKAGES += \
 
 # Extra Optional packages
 PRODUCT_PACKAGES += \
+    CNAWallpapers \
     Trebuchet
 
 # Extra tools
@@ -132,7 +133,7 @@ include vendor/cna/config/themes_common.mk
 BRANCH = JoyRide
 PRODUCT_VERSION_MAJOR = 3
 PRODUCT_VERSION_MINOR = 6
-PRODUCT_VERSION_MAINTENANCE = 1
+PRODUCT_VERSION_MAINTENANCE = 5
 
 PRODUCT_BUILD_PROP_OVERRIDES += BUILD_DISPLAY_ID=JRO03R
 
@@ -141,7 +142,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.goo.developerid=justlovejoy \
 	ro.goo.board=$(TARGET_PRODUCT) \
 	ro.goo.rom=cna_$(TARGET_PRODUCT) \
-	ro.goo.version=1
+	ro.goo.version=$(shell date +%m%d%Y)
 
 PRODUCT_PROPERTY_OVERRIDES += \
 ro.cnaversion=Codename-Android-($(BRANCH))-$(PRODUCT_VERSION_MAJOR).$(PRODUCT_VERSION_MINOR).$(PRODUCT_VERSION_MAINTENANCE)-$(shell date +%m%d%Y)$(PRODUCT_VERSION_DEVICE_SPECIFIC)-ALPHA 2
