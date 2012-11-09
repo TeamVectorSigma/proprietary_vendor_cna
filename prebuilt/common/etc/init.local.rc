@@ -1,5 +1,9 @@
 # Extras
 
+on boot
+    chown system system /sys/block/mmcblk0/queue/scheduler
+    chmod 0664 /sys/block/mmcblk0/queue/scheduler
+
 # Compcache - handle at boot
 service compcache /system/bin/handle_compcache
     user root
