@@ -37,6 +37,10 @@ PRODUCT_COPY_FILES +=  \
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.software.sip.voip.xml:system/etc/permissions/android.software.sip.voip.xml
 
+# This is CM!
+PRODUCT_COPY_FILES += \
+    vendor/cm/config/permissions/com.cyanogenmod.android.xml:system/etc/permissions/com.cyanogenmod.android.xml
+
 # Don't export PS1 in /system/etc/mkshrc.
 PRODUCT_COPY_FILES += \
     vendor/cna/prebuilt/common/etc/mkshrc:system/etc/mkshrc \
@@ -88,7 +92,8 @@ PRODUCT_PACKAGES += \
     LiveWallpapersPicker \
     VisualizationWallpapers \
     PhaseBeam\
-    Apollo
+    Apollo \
+    CMUpdater
 
 # Extra Optional packages
 PRODUCT_PACKAGES += \
@@ -136,7 +141,7 @@ PRODUCT_VERSION_MAJOR = 3
 PRODUCT_VERSION_MINOR = 6
 PRODUCT_VERSION_MAINTENANCE = 5
 
-PRODUCT_BUILD_PROP_OVERRIDES += BUILD_DISPLAY_ID=JRO03R
+PRODUCT_BUILD_PROP_OVERRIDES += BUILD_DISPLAY_ID=JZO54K
 
 # GOO-Integration Tools
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -146,17 +151,17 @@ PRODUCT_PROPERTY_OVERRIDES += \
 	ro.goo.version=$(shell date +%m%d%Y)
 
 PRODUCT_PROPERTY_OVERRIDES += \
-ro.cnaversion=Codename-Android-($(BRANCH))-$(PRODUCT_VERSION_MAJOR).$(PRODUCT_VERSION_MINOR).$(PRODUCT_VERSION_MAINTENANCE)-$(shell date +%m%d%Y)$(PRODUCT_VERSION_DEVICE_SPECIFIC)-ALPHA 2
+ro.cnaversion=Codename-Android-$(BRANCH)-$(PRODUCT_VERSION_MAJOR).$(PRODUCT_VERSION_MINOR).$(PRODUCT_VERSION_MAINTENANCE)-$(shell date +%m%d%Y)$(PRODUCT_VERSION_DEVICE_SPECIFIC)-ALPHA 2
 
 ifdef CNA_NIGHTLY
     PRODUCT_PROPERTY_OVERRIDES += \
-        ro.modversion=Codename-Android-($(BRANCH))-$(PRODUCT_VERSION_MAJOR)-$(shell date +%m%d%Y)-NIGHTLY-$(PRODUCT_RELEASE_NAME)
+        ro.modversion=Codename-Android-$(BRANCH)-$(PRODUCT_VERSION_MAJOR)-$(shell date +%m%d%Y)-NIGHTLY-$(PRODUCT_RELEASE_NAME)
 else
     ifdef CNA_RELEASE
         PRODUCT_PROPERTY_OVERRIDES += \
-            ro.modversion=Codename-Android-($(BRANCH))-$(PRODUCT_VERSION_MAJOR).$(PRODUCT_VERSION_MINOR).$(PRODUCT_VERSION_MAINTENANCE)-$(shell date +%m%d%Y)-$(PRODUCT_RELEASE_NAME)
+            ro.modversion=Codename-Android-$(BRANCH)-$(PRODUCT_VERSION_MAJOR).$(PRODUCT_VERSION_MINOR).$(PRODUCT_VERSION_MAINTENANCE)-$(shell date +%m%d%Y)-$(PRODUCT_RELEASE_NAME)
     else
         PRODUCT_PROPERTY_OVERRIDES += \
-            ro.modversion=Codename-Android-($(BRANCH))-$(PRODUCT_VERSION_MAJOR).$(PRODUCT_VERSION_MINOR).$(PRODUCT_VERSION_MAINTENANCE)$(PRODUCT_VERSION_DEVICE_SPECIFIC)-RC-$(PRODUCT_RELEASE_NAME)-UNOFFICIAL
+            ro.modversion=Codename-Android-$(BRANCH)-$(PRODUCT_VERSION_MAJOR).$(PRODUCT_VERSION_MINOR).$(PRODUCT_VERSION_MAINTENANCE)$(PRODUCT_VERSION_DEVICE_SPECIFIC)-RC-$(PRODUCT_RELEASE_NAME)-UNOFFICIAL
     endif
 endif
