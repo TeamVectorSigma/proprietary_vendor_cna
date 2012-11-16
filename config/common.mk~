@@ -92,8 +92,7 @@ PRODUCT_PACKAGES += \
     LiveWallpapersPicker \
     VisualizationWallpapers \
     PhaseBeam\
-    Apollo \
-    CMUpdater
+    Apollo 
 
 # Extra Optional packages
 PRODUCT_PACKAGES += \

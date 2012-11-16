@@ -92,8 +92,7 @@ PRODUCT_PACKAGES += \
     LiveWallpapersPicker \
     VisualizationWallpapers \
     PhaseBeam\
-    Apollo \
-    CMUpdater
+    Apollo 
 
 # Extra Optional packages
 PRODUCT_PACKAGES += \
@@ -151,7 +150,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 	ro.goo.version=$(shell date +%m%d%Y)
 
 PRODUCT_PROPERTY_OVERRIDES += \
-ro.cnaversion=Codename-Android-$(BRANCH)-$(PRODUCT_VERSION_MAJOR).$(PRODUCT_VERSION_MINOR).$(PRODUCT_VERSION_MAINTENANCE)-$(shell date +%m%d%Y)$(PRODUCT_VERSION_DEVICE_SPECIFIC)-ALPHA 2
+ro.cnaversion=Codename-Android-$(BRANCH)-$(PRODUCT_VERSION_MAJOR).$(PRODUCT_VERSION_MINOR).$(PRODUCT_VERSION_MAINTENANCE)-$(shell date +%m%d%Y)$(PRODUCT_VERSION_DEVICE_SPECIFIC)-ALPHA 3
 
 ifdef CNA_NIGHTLY
     PRODUCT_PROPERTY_OVERRIDES += \
