@@ -98,7 +98,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     CNAWallpapers \
     Trebuchet \
-    FileManager
+    DSPManager
 
 # Extra tools
 PRODUCT_PACKAGES += \
@@ -121,7 +121,7 @@ PRODUCT_PACKAGES += \
     sshd \
     sshd_config \
     ssh-keygen \
-    start-ss
+    start-ssh
 
 # rsync
 PRODUCT_PACKAGES += \
@@ -137,8 +137,8 @@ include vendor/cna/config/themes_common.mk
 
 BRANCH = JoyRide
 PRODUCT_VERSION_MAJOR = 3
-PRODUCT_VERSION_MINOR = 6
-PRODUCT_VERSION_MAINTENANCE = 5
+PRODUCT_VERSION_MINOR = 8
+PRODUCT_VERSION_MAINTENANCE = 0
 
 PRODUCT_BUILD_PROP_OVERRIDES += BUILD_DISPLAY_ID=JZO54K
 
