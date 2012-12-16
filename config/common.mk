@@ -32,7 +32,7 @@ PRODUCT_COPY_FILES +=  \
 PRODUCT_COPY_FILES +=  \
     vendor/cna/prebuilt/common/media/LMprec_508.emd:system/media/LMprec_508.emd \
     vendor/cna/prebuilt/common/media/PFFprec_600.emd:system/media/PFFprec_600.emd \
-    vendor/cna/prebuilt/hdpi/blaster.mp3:system/media/blaster.mp3
+    vendor/cna/prebuilt/common/media/blaster.mp3:system/media/blaster.mp3
 
 # Enable SIP+VoIP on all targets
 PRODUCT_COPY_FILES += \
