@@ -7,7 +7,8 @@ $(call inherit-product, vendor/cna/config/common_full_phone.mk)
 $(call inherit-product, vendor/cna/config/cdma.mk)
 
 PRODUCT_COPY_FILES +=  \
-    vendor/cna/prebuilt/hdpi/bootanimation.zip:system/media/bootanimation.zip 
+    vendor/cna/prebuilt/hdpi/bootanimation.zip:system/media/bootanimation.zip \
+    vendor/cna/prebuilt/hdpi/blaster.mp3:system/media/blaster.mp3 
 
 # Release name
 PRODUCT_RELEASE_NAME := D710
